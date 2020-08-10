@@ -1,11 +1,69 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 .container{
     width: 1440px;
     height: auto;
     margin: auto;
+    background-color: gray;
     
 
+}
+.navbar{
+    
+    display: flex;
+    background-color: #eeee;
+    margin: 1rem;
+    
+}
+.nav-img{
+    display: flex;
+    align-self: center;
+    padding: 15px 284px 15px 140px;
+    
+
+    
+}
+.nav-group1{
+    display: flex;
+    
+    list-style: none;
+    
+    line-height: 17px;
+    font-size:14px;
+    font-style: normal;
+    background-color: #ffff;
+}
+.nav-group1 .about{
+    color: rgba(31, 32, 65, 0.75);
+    font-weight: bold;
+}
+.nav-group1 li{
+    
+    color: rgba(31, 32, 65, 0.5);
+    padding: 26px 10px;
+}
+.btn{
+    display: block;
+    text-align: center;
+    margin:   20px;
+    padding: 0 20px 0 20px;
+    text-transform: uppercase;
+    border-radius: 1rem;
+   border: 2px solid #BC9CFF;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    
+}
+.btn1{
+    color: #BC9CFF;
+    background: #ffff;
+}
+.btn2{
+    color:#ffff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
