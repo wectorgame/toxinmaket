@@ -1,69 +1,140 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.container{
+a{
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.container {
     width: 1440px;
     height: auto;
     margin: auto;
     background-color: gray;
-    
+
 
 }
-.navbar{
-    
+
+.navbar {
+
     display: flex;
-    background-color: #eeee;
+    background-color: #ffff;
     margin: 1rem;
-    
+
 }
-.nav-img{
+
+.nav-img {
     display: flex;
     align-self: center;
     padding: 15px 284px 15px 140px;
-    
 
-    
+
+
 }
-.nav-group1{
+
+.menu-list {
     display: flex;
-    
+
     list-style: none;
-    
+    text-align: center;
     line-height: 17px;
-    font-size:14px;
+    font-size: 14px;
     font-style: normal;
     background-color: #ffff;
 }
-.nav-group1 .about{
+
+.active, .menu-list ul li:hover {
     color: rgba(31, 32, 65, 0.75);
     font-weight: bold;
-}
-.nav-group1 li{
     
+}
+
+.menu-list li {
+
     color: rgba(31, 32, 65, 0.5);
     padding: 26px 10px;
 }
-.btn{
+.menu-list .not-active{
+    
+    color: rgba(31, 32, 65, 0.5);
+}
+.sub-menu-1{
+    display: none;
+    list-style: none;
+    width: 70px;
+}
+.nav-services:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: #eee;
+    margin-top: 5px;
+    margin-left: -5px;
+    
+    
+}
+
+
+
+.btn {
     display: block;
     text-align: center;
-    margin:   20px;
+    margin: 20px;
     padding: 0 20px 0 20px;
     text-transform: uppercase;
     border-radius: 1rem;
-   border: 2px solid #BC9CFF;
+    border: 2px solid #BC9CFF;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    
+
 }
-.btn1{
+
+.btn1 {
     color: #BC9CFF;
     background: #ffff;
 }
-.btn2{
-    color:#ffff;
+
+.btn2 {
+    color: #ffff;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.office{
+    display: flex;
+    color: rgba(31, 32, 65, 0.5);
+    
+    border-left: 2px solid rgba(31, 32, 65, 0.05);
+    
+    margin: 13px 0 13px 21px;
+    padding: 13px 0 13px 20px;
+   
+    font-size: 14px;
+    line-height: 17px;
+
+    
+}
+.footer-widgets{
+display: flex;
+padding-top: 100px;
+background-color: #fff;
+margin: 1rem;
+}
+.footer-group1{
+    width: 260px;
+    margin-left: 140px;
+}
+.footer-widgets ul{
+    list-style: none;
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 46px;
+}
+.footer-widgets ul>li{
+    margin-top: 0;
+}
+.footer-widgets li{
+    margin: 20px;
+    color: rgba(31, 32, 65, 0.5);
 }
