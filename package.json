@@ -1,0 +1,27 @@
+{
+  "name": "toxinmaket",
+  "version": "1.0.0",
+  "description": "toxinmaket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wectorgame/toxinmaket.git"
+  },
+  "keywords": [
+    "toxinmaket",
+    "webpack"
+  ],
+  "author": "wectorgame <wectorgame@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wectorgame/toxinmaket/issues"
+  },
+  "homepage": "https://github.com/wectorgame/toxinmaket#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
