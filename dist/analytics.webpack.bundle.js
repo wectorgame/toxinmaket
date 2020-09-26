@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./analytics.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./Post.js":
-/*!*****************!*\
-  !*** ./Post.js ***!
-  \*****************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./analytics.js":
+/*!**********************!*\
+  !*** ./analytics.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n    constructor(title){\r\n        this.title = title\r\n        this.date = new Date()\r\n    }\r\n    toString(){\r\n        JSON.stringify({\r\n            title: this.title,\r\n            date: this.date.toJSON\r\n        })\r\n    }\r\n}\n\n//# sourceURL=webpack:///./Post.js?");
-
-/***/ }),
-
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Toxinmaket post title')\r\nconsole.log('Post to String:', post.toString())\n\n//# sourceURL=webpack:///./index.js?");
+eval("function createAnalytics(){\r\n    let counter = 0\r\n    let isDestroyed = false\r\n    const listener = () => counter++\r\n\r\n    document.addEventListener('click', listener)\r\n    return{\r\n        destroy(){\r\n            document.removeEventListener('click',listener)\r\n            isDestroyed = true\r\n        },\r\n        getClicks(){\r\n            if(isDestroyed){\r\n                return 'Analytics is destroyed'\r\n            }\r\n            return counter\r\n        }\r\n    }\r\n}\r\nwindow.analytics = createAnalytics()\n\n//# sourceURL=webpack:///./analytics.js?");
 
 /***/ })
 
