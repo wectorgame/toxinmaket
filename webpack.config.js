@@ -1,4 +1,6 @@
 const path = require("path");
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: "development",
   entry: {
@@ -7,6 +9,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].webpack.bundle.js",
+    filename: "[name].[contenthash].js",
   },
+  plugins: [
+      new HTMLWebpackPlugin({
+          title: 'toxinmaket'
+      })
+  ]
 };
