@@ -1,6 +1,7 @@
 function createAnalytics(){
     let counter = 0
     let isDestroyed = false
+    console.log('test')
     const listener = () => counter++
 
     document.addEventListener('click', listener)
