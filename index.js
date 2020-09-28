@@ -7,7 +7,7 @@ import ToxinLogo from './img/Logo.png'
 import './styles/style.css'
 const post = new Post('Toxinmaket post title', ToxinLogo)
 console.log('Post to String:', post.toString())
-$('pre').addClass('code').html('post.toString()')
+$('pre').addClass('code').html(post.toString())
 /* console.log('JSON:', json)
 console.log('XML:', xml)
 
