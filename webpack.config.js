@@ -7,6 +7,7 @@ const MiniCss = require("mini-css-extract-plugin");
 const OptimizeCssAssetPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { config } = require("process");
+const polyfill = require("@babel/polyfill");
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 const optimization = () => {
@@ -20,9 +21,10 @@ const optimization = () => {
   }
   return config;
 };
-const filename= ext => isDev ? `[name].${ext}`:`[name].[hash].${ext}`
-const cssLoader= extra =>{
-  const load = [{
+const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
+const cssLoader = (extra) => {
+  const load = [
+    {
       loader: MiniCss.loader,
       options: {
         hmr: isDev,
@@ -31,21 +33,31 @@ const cssLoader= extra =>{
     },
     "css-loader",
     "sass-loader",
-    "less-loader"
-  ]
-  if(extra)load.push(extra);
+    "less-loader",
+  ];
+  if (extra) load.push(extra);
   return load;
-}
+};
+const babelOptions =preset=>{
+  const addpreset = {
+    presets: ["@babel/preset-env"],
+    plugins: ["@babel/plugin-proposal-class-properties"],
+  };
+  if(preset){
+    addpreset.presets.push(preset);
+  }
+  return addpreset;
+} 
 module.exports = {
   context: "",
   mode: "development",
   entry: {
-    main: "./index.js",
-    analytics: "./analytics.js",
+    main: ["@babel/polyfill", "./index.jsx"],
+    analytics: "./analytics.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: filename('js'),
+    filename: filename("js"),
   },
   resolve: {
     extensions: [".js", ".json", ".png"],
@@ -58,6 +70,7 @@ module.exports = {
     port: 4200,
     hot: isDev,
   },
+  devtool: isDev ? 'source-map' : '',
   plugins: [
     new HTMLWebpackPlugin({
       template: "./main.html",
@@ -75,22 +88,22 @@ module.exports = {
       ],
     }),
     new MiniCss({
-      filename: filename('css'),
+      filename: filename("css"),
     }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: cssLoader()
+        use: cssLoader(),
       },
       {
         test: /\.less$/,
-        use: cssLoader("less-loader")
+        use: cssLoader("less-loader"),
       },
       {
         test: /\.s[ac]ss$/,
-        use: cssLoader("sass-loader")
+        use: cssLoader("sass-loader"),
       },
       { test: /\.(png|jpg|svg|gif)$/, use: ["file-loader"] },
       {
@@ -114,11 +127,25 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
+          options: babelOptions(),
+        },
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: babelOptions("@babel/preset-typescript"),
+        },
+      },
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: babelOptions("@babel/preset-react"),
+        },
+      },
     ],
   },
 };
