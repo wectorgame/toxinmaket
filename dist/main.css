@@ -353,174 +353,152 @@ template {
     src: url(3cd786652b8a2e9d41f210cb1a527ff6.ttf) format('truetype');
 }
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: rgba(31, 32, 65, 0.75);
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .container {
-    width: 1440px;
-    height: auto;
-    margin: auto;
-    background-color: gray;
-
-
+  width: 1440px;
+  height: auto;
+  margin: auto;
+  background-color: gray;
 }
 
 .navbar {
-
-    display: flex;
-    background-color: #ffff;
-    margin: 1rem;
-
+  display: flex;
+  background-color: #ffff;
+  margin: 1rem;
 }
 
 .nav-img {
-    
-    display: flex;
-    align-self: center;
-    padding: 15px 284px 15px 140px;
-
-
-
+  display: flex;
+  align-self: center;
+  padding: 15px 284px 15px 140px;
 }
 
 .menu-list {
-    display: flex;
-
-    list-style: none;
-    text-align: center;
-    line-height: 17px;
-    font-size: 14px;
-    font-style: normal;
-    background-color: #ffff;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  line-height: 17px;
+  font-size: 14px;
+  font-style: normal;
+  background-color: #ffff;
 }
 
 .active,
 .menu-list ul li:hover {
-    color: rgba(31, 32, 65, 0.75);
-    font-weight: bold;
-
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: bold;
 }
 
 .menu-list li {
-
-    color: rgba(31, 32, 65, 0.5);
-    padding: 26px 10px;
+  color: rgba(31, 32, 65, 0.5);
+  padding: 26px 10px;
 }
 
 .not-active {
-
-    color: rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .sub-menu-1 {
-    display: none;
-    list-style: none;
-    width: 70px;
+  display: none;
+  list-style: none;
+  width: 70px;
 }
 
 .nav-services:hover .sub-menu-1 {
-    display: block;
-    position: absolute;
-    background: #eee;
-    margin-top: 5px;
-    margin-left: -5px;
-
-
+  display: block;
+  position: absolute;
+  background: #eee;
+  margin-top: 5px;
+  margin-left: -5px;
 }
 
-
-
 .btn {
-    display: block;
-    text-align: center;
-    margin: 20px;
-    padding: 0 20px 0 20px;
-    text-transform: uppercase;
-    border-radius: 1rem;
-    border: 2px solid #BC9CFF;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-
+  display: block;
+  text-align: center;
+  margin: 20px;
+  padding: 0 20px 0 20px;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: 2px solid #BC9CFF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .btn1 {
-    color: #BC9CFF;
-    background: #ffff;
+  color: #BC9CFF;
+  background: #ffff;
 }
 
 .btn2 {
-    color: #ffff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: #ffff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
 .office {
-    display: flex;
-    color: rgba(31, 32, 65, 0.5);
-
-    border-left: 2px solid rgba(31, 32, 65, 0.05);
-
-    margin: 13px 0 13px 21px;
-    padding: 13px 0 13px 20px;
-
-    font-size: 14px;
-    line-height: 17px;
-
-
+  display: flex;
+  color: rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.05);
+  margin: 13px 0 13px 21px;
+  padding: 13px 0 13px 20px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .footer-widgets {
-    display: flex;
-    padding-top: 100px;
-    background-color: #fff;
-    margin: 1rem;
+  display: flex;
+  padding-top: 100px;
+  background-color: #fff;
+  margin: 1rem;
 }
 
 .footer-group1 {
-    width: 260px;
-    margin-left: 140px;
+  width: 260px;
+  margin-left: 140px;
 }
-.footer-descp{
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 20px;
-    color: rgba(31, 32, 65, 0.75);
+
+.footer-descp {
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 20px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer-widgets ul {
-    list-style: none;
-    margin: 20px;
-    margin-top: 0;
-    margin-left: 46px;
+  list-style: none;
+  margin: 20px;
+  margin-top: 0;
+  margin-left: 46px;
 }
 
-.footer-widgets ul>li {
-    margin-top: 0;
+.footer-widgets ul > li {
+  margin-top: 0;
 }
 
 .footer-widgets li {
-    margin: 20px;
+  margin: 20px;
+}
 
+.footer-group2 {
+  width: 260px;
 }
-.footer-group2{
-    width: 260px;
-}
+
 .footer-header {
-    color: rgb(31, 32, 65);
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-
-    text-transform: uppercase;
-
+  color: #1f2041;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }
 .box {
   padding: 1rem;
@@ -528,8 +506,19 @@ a {
   margin-top: 1rem;
   border: 1px solid #ccc;
 }
+
 .box h2 {
   text-align: center;
   color: darkblue;
 }
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+}
 
+.card h2 {
+  text-align: center;
+  color: darkred;
+}

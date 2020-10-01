@@ -7,6 +7,8 @@ import csv from './assets/data.csv' */
 import ToxinLogo from './img/Logo.png'
 import './styles/style.css'
 import './styles/less.less'
+import './styles/scss.scss'
+import './babel'
 const post = new Post('Toxinmaket post title', ToxinLogo)
 console.log('Post to String:', post.toString())
 $('pre').addClass('code').html(post.toString())

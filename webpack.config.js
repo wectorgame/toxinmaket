@@ -21,6 +21,21 @@ const optimization = () => {
   return config;
 };
 const filename= ext => isDev ? `[name].${ext}`:`[name].[hash].${ext}`
+const cssLoader= extra =>{
+  const load = [{
+      loader: MiniCss.loader,
+      options: {
+        hmr: isDev,
+        reloadAll: true,
+      },
+    },
+    "css-loader",
+    "sass-loader",
+    "less-loader"
+  ]
+  if(extra)load.push(extra);
+  return load;
+}
 module.exports = {
   context: "",
   mode: "development",
@@ -67,30 +82,15 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: MiniCss.loader,
-            options: {
-              hmr: isDev,
-              reloadAll: true,
-            },
-          },
-          "css-loader",
-        ],
+        use: cssLoader()
       },
       {
         test: /\.less$/,
-        use: [
-          {
-            loader: MiniCss.loader,
-            options: {
-              hmr: isDev,
-              reloadAll: true,
-            },
-          },
-          "css-loader",
-          "less-loader",
-        ],
+        use: cssLoader("less-loader")
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: cssLoader("sass-loader")
       },
       { test: /\.(png|jpg|svg|gif)$/, use: ["file-loader"] },
       {
@@ -109,6 +109,16 @@ module.exports = {
         test: /\.csv$/,
         use: ["csv-loader"],
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
     ],
   },
 };
