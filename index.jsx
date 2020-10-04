@@ -111,46 +111,73 @@ const App = () => (
     </div>
 
     <footer class="footer-widgets">
-      <div class="footer-group1">
-        <img src="img/Logo.png" alt="" />
-        <p class="footer-descp">
-          Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
-          «Отельные взгляды»
-        </p>
-      </div>
-      <ul>
-        <li class="footer-header">Навигация</li>
-        <li class="not-active">О нас</li>
-        <li class="not-active">Новости</li>
-        <li class="not-active">Служба поддержки</li>
-        <li class="not-active">Услуги</li>
-      </ul>
-      <ul>
-        <li class="footer-header">О нас</li>
-        <li class="not-active">О сервисе</li>
-        <li class="not-active">Наша команда</li>
-        <li class="not-active">Вакансии</li>
-        <li class="not-active">Инвесторы</li>
-      </ul>
-      <ul>
-        <li class="footer-header">Служба поддержки</li>
-        <li class="not-active">Соглашения</li>
-        <li class="not-active">Сообщества</li>
-        <li class="not-active">Связь с нами</li>
-      </ul>
-      <div class="footer-group2">
-        <p class="footer-header">подписка</p>
-        <p class="footer-descp">
-          Получайте специальные предложения и новости сервиса
-        </p>
-        <div className="inputWithIcon">
-        <input type="text" placeholder="Email" class="input-email" />
-        <i class="material-icons">arrow_forward</i>
+      <div className="footer-groups">
+        <div class="footer-group1">
+          <img src="img/Logo.png" alt="" />
+          <p class="footer-descp">
+            Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
+            «Отельные взгляды»
+          </p>
         </div>
+        <ul>
+          <li class="footer-header">Навигация</li>
+          <li class="not-active">О нас</li>
+          <li class="not-active">Новости</li>
+          <li class="not-active">Служба поддержки</li>
+          <li class="not-active">Услуги</li>
+        </ul>
+        <ul>
+          <li class="footer-header">О нас</li>
+          <li class="not-active">О сервисе</li>
+          <li class="not-active">Наша команда</li>
+          <li class="not-active">Вакансии</li>
+          <li class="not-active">Инвесторы</li>
+        </ul>
+        <ul>
+          <li class="footer-header">Служба поддержки</li>
+          <li class="not-active">Соглашения</li>
+          <li class="not-active">Сообщества</li>
+          <li class="not-active">Связь с нами</li>
+        </ul>
+        <div class="footer-group2">
+          <p class="footer-header">подписка</p>
+          <p class="footer-descp">
+            Получайте специальные предложения и новости сервиса
+          </p>
+          <div className="inputWithIcon">
+            <input type="text" placeholder="Email" class="input-email" />
+            <i class="material-icons">arrow_forward</i>
+          </div>
+        </div>
+      </div>
+      <div className="copyright">
+        <div className="copyright-text">
+          Copyright © 2018 Toxin отель. Все права зачищены.
+        </div>
+        
+          <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="http://facebook.com"><i class="fab fa-facebook-square"></i></a>
+          <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+       
       </div>
     </footer>
     <div className="empty"></div>
-    
+
+    <div className="footer-small">
+   
+        <div class="footer-small-group">
+          <img src="img/Logo.png" alt="" />
+          <p class="footer-small-descp">
+          Copyright © 2018 Toxin отель. Все права зачищены.
+          </p>
+          <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="http://facebook.com"><i class="fab fa-facebook-square"></i></a>
+          <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </div>
+    <div className="empty"></div>
   </div>
 );
 

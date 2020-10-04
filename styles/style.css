@@ -104,6 +104,7 @@ a {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
+    outline: none;
 
 }
 
@@ -133,10 +134,15 @@ a {
 }
 
 .footer-widgets {
-    display: flex;
+
     padding-top: 100px;
     background-color: #fff;
     margin: 1rem;
+    
+}
+
+.footer-groups {
+    display: flex;
 }
 
 .footer-group1 {
@@ -194,9 +200,11 @@ a {
     border-color: #eee;
     box-shadow: 0 0 10px #eee;
 }
-.input-email::placeholder{
+
+.input-email::placeholder {
     opacity: .5;
 }
+
 .inputWithIcon .input-email {}
 
 .inputWithIcon {
@@ -226,4 +234,59 @@ a {
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+
+
+.fab {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 23px;
+    padding-right: 20px;
+}
+.fa-instagram{
+    padding-right: 0;
+}
+
+.copyright {
+    display: flex;
+    padding: 26px;
+    margin: 101px;
+    margin-bottom: 0;
+
+}
+
+.copyright-text {
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-right: 681px;
+
+}
+
+.footer-small{
+    margin: auto;
+    background-color: #fff;
+    width: 768px;
+    height: 367px;
+}
+
+.footer-small-group{
+    color: rgba(31, 32, 65, 0.75);
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 120px;
+    white-space: nowrap;
+    text-align: center;
+}
+.footer-small-descp{
+    padding-bottom: 25px;
+    padding-top: 20px;
 }
