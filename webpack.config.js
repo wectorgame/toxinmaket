@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCss = require("mini-css-extract-plugin");
+const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
 const OptimizeCssAssetPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -38,26 +39,54 @@ const cssLoader = (extra) => {
   if (extra) load.push(extra);
   return load;
 };
-const babelOptions =preset=>{
+const babelOptions = (preset) => {
   const addpreset = {
     presets: ["@babel/preset-env"],
     plugins: ["@babel/plugin-proposal-class-properties"],
   };
-  if(preset){
+  if (preset) {
     addpreset.presets.push(preset);
   }
   return addpreset;
-} 
-const jsLoader=() =>{
-  const loaders =[{
-    loader: "babel-loader",
-    options: babelOptions(),
-  }]
-  if(isDev){
-    loaders.push('eslint-loader')
+};
+const jsLoader = () => {
+  const loaders = [
+    {
+      loader: "babel-loader",
+      options: babelOptions(),
+    },
+  ];
+  if (isDev) {
+    loaders.push("eslint-loader");
   }
- return loaders
-}
+  return loaders;
+};
+const plugins = () => {
+  const base = [
+    new HTMLWebpackPlugin({
+      template: "./main.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "favicon.ico"),
+          to: path.resolve(__dirname, "dist"),
+        },
+      ],
+    }),
+    new MiniCss({
+      filename: filename("css"),
+    }),
+  ];
+  if (isProd) {
+    base.push(new BundleAnalyzerPlugin());
+  }
+  return base;
+};
 module.exports = {
   context: "",
   mode: "development",
@@ -80,27 +109,8 @@ module.exports = {
     port: 4200,
     hot: isDev,
   },
-  devtool: isDev ? 'source-map' : '',
-  plugins: [
-    new HTMLWebpackPlugin({
-      template: "./main.html",
-      minify: {
-        collapseWhitespace: isProd,
-      },
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "favicon.ico"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    }),
-    new MiniCss({
-      filename: filename("css"),
-    }),
-  ],
+  devtool: isDev ? "source-map" : "",
+  plugins: plugins(),
   module: {
     rules: [
       {

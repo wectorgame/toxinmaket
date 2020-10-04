@@ -143,16 +143,14 @@ const App = () => (
         <p class="footer-descp">
           Получайте специальные предложения и новости сервиса
         </p>
+        <div className="inputWithIcon">
         <input type="text" placeholder="Email" class="input-email" />
+        <i class="material-icons">arrow_forward</i>
+        </div>
       </div>
     </footer>
-
-    <div class="box">
-      <h2>less</h2>
-    </div>
-    <div class="card">
-      <h2>SCSS</h2>
-    </div>
+    <div className="empty"></div>
+    
   </div>
 );
 
