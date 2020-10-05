@@ -1,10 +1,11 @@
 import * as $ from "jquery";
 import Post from "./models/Post";
-
+import _ from 'lodash';
 /* import json from './assets/json.json'
 import xml from './assets/data.xml'
 import csv from './assets/data.csv' */
 import ToxinLogo from "./img/Logo.png";
+import Hotel1 from "./img/hotel-1.png"
 import React from "react";
 import { render } from "react-dom";
 import "./styles/style.css";
@@ -181,8 +182,19 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById("app"));
-/* console.log('JSON:', json)
-console.log('XML:', xml)
 
-console.log('CSV:',csv) */
+const Cards = () => (
+
+  <div class="container">
+    <div className="card">
+      <div className="card-img"></div>
+    </div>
+  
+  
+      
+  </div>
+  
+  );
+  render(<App />, document.getElementById("app"));
+
+  render(<Cards />, document.getElementById("cards"));

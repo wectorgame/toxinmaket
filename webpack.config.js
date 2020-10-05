@@ -3,7 +3,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCss = require("mini-css-extract-plugin");
-const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const OptimizeCssAssetPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -69,6 +69,14 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      filename: "cards.html",
+      template: "./cards.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -126,7 +134,8 @@ module.exports = {
         use: cssLoader("sass-loader"),
       },
       { test: /\.(png|jpg|svg|gif)$/, use: ["file-loader"] },
-      {
+      { test: /\.(png|jpg)$/, use:{loader: "url-loader", },
+      
         test: /\.(html)$/,
         use: ["html-loader"],
       },

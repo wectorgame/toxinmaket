@@ -1,5 +1,6 @@
 @import "~normalize.css";
 @import "montserrat.css";
+@import "cards.css";
 
 * {
     padding: 0;
@@ -290,3 +291,5 @@ a {
     padding-bottom: 25px;
     padding-top: 20px;
 }
+
+

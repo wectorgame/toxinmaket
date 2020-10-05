@@ -1,0 +1,15 @@
+.card{
+    width: 270px;
+    height: 257.5px;
+    background-color: #fff;
+    margin: auto;
+    
+    
+}
+
+.card-img{
+    border: 1px solid red;
+    background: url(../img/hotel-1.png);   
+    
+
+}
