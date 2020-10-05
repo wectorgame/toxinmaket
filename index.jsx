@@ -1,11 +1,11 @@
 import * as $ from "jquery";
 import Post from "./models/Post";
-import _ from 'lodash';
+import _ from "lodash";
 /* import json from './assets/json.json'
 import xml from './assets/data.xml'
 import csv from './assets/data.csv' */
 import ToxinLogo from "./img/Logo.png";
-import Hotel1 from "./img/hotel-1.png"
+import Hotel1 from "./img/hotel-1.png";
 import React from "react";
 import { render } from "react-dom";
 import "./styles/style.css";
@@ -16,6 +16,8 @@ const post = new Post("Toxinmaket post title", ToxinLogo);
 console.log("Post to String:", post.toString());
 
 const App = () => (
+  <>
+  <Cards/>
   <div class="container">
     <div class="navbar">
       <img src="img/Logo.png" alt="" class="nav-img" />
@@ -155,46 +157,57 @@ const App = () => (
         <div className="copyright-text">
           Copyright © 2018 Toxin отель. Все права зачищены.
         </div>
-        
-          <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="http://facebook.com"><i class="fab fa-facebook-square"></i></a>
-          <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
-       
+
+        <a href="http://twitter.com">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="http://facebook.com">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="http://instagram.com">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </footer>
     <div className="empty"></div>
 
     <div className="footer-small">
-   
-        <div class="footer-small-group">
-          <img src="img/Logo.png" alt="" />
-          <p class="footer-small-descp">
+      <div class="footer-small-group">
+        <img src="img/Logo.png" alt="" />
+        <p class="footer-small-descp">
           Copyright © 2018 Toxin отель. Все права зачищены.
-          </p>
-          <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="http://facebook.com"><i class="fab fa-facebook-square"></i></a>
-          <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
-        </div>
-
-
+        </p>
+        <a href="http://twitter.com">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="http://facebook.com">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="http://instagram.com">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
     <div className="empty"></div>
   </div>
+  </>
 );
 
-
 const Cards = () => (
-
   <div class="container">
     <div className="card">
-      <div className="card-img"></div>
+      <div className="card-img">
+      <div className="ellipse">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot no-margin-right"></span>
+      </div>
+      </div>
+     
     </div>
-  
-  
-      
   </div>
-  
-  );
-  render(<App />, document.getElementById("app"));
+);
+render(<App />, document.getElementById("app"));
 
-  render(<Cards />, document.getElementById("cards"));
+

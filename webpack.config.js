@@ -69,13 +69,7 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
-    new HTMLWebpackPlugin({
-      filename: "cards.html",
-      template: "./cards.html",
-      minify: {
-        collapseWhitespace: isProd,
-      },
-    }),
+    
 
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({

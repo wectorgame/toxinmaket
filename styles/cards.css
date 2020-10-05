@@ -1,15 +1,43 @@
 .card{
     width: 270px;
     height: 257.5px;
-    background-color: #fff;
+    background-color: #eee;
     margin: auto;
+    border-radius: 5px;
     
     
 }
 
-.card-img{
-    border: 1px solid red;
+.card-img{  
+    display: flex;
+    height: 151.38px;
     background: url(../img/hotel-1.png);   
-    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    flex-direction: row-reverse;
 
+}
+.ellipse{
+    margin-right: 14.99px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    
+}
+.dot{
+    
+    width: 7.5px;
+height: 7.49px;
+margin-right: 3.5px;
+  background-color: rgba(255,255,255,0);
+  border: 1px solid #eee;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+.dot:hover{
+    background-color: rgb(255,255,255);
+}
+
+.no-margin-right{
+    margin-right: 0;
 }
