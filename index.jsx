@@ -18,6 +18,7 @@ console.log("Post to String:", post.toString());
 const App = () => (
   <>
   <Cards/>
+  <Login/>
   <div class="container">
     <div class="navbar">
       <img src="img/Logo.png" alt="" class="nav-img" />
@@ -222,6 +223,11 @@ const Cards = () => (
     </div>
   </div>
 );
+const Login = ()=>{
+  <div className="container">
+    <h1 className="title">Войти</h1>
+  </div>
+}
 render(<App />, document.getElementById("app"));
 
 
