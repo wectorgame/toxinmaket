@@ -198,11 +198,25 @@ const Cards = () => (
     <div className="card">
       <div className="card-img">
       <div className="ellipse">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot no-margin-right"></span>
-      </div>
+        <input type="radio" name="hotel" className="dot"/>
+        <input type="radio" name="hotel" className="dot"/>
+        <input type="radio" name="hotel" className="dot"/>
+        <input type="radio" name="hotel" className="dot"/>
+       
+      </div></div>
+      <div className="card-info">
+        <div className="card-number">№840</div>
+        <div className="card-price">9 900₽ в сутки</div>
+        <div className="card-border">
+        <div className="card-stars">
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star</i>
+        <i class="material-icons">star_border</i>
+        </div>
+        <div className="card-reviews">65 Отзывов</div>
+        </div>
       </div>
      
     </div>

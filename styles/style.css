@@ -1,6 +1,7 @@
 @import "~normalize.css";
 @import "montserrat.css";
 @import "cards.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
     padding: 0;
