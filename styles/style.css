@@ -2,6 +2,8 @@
 @import "montserrat.css";
 @import "cards.css";
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import "login.css";
+
 
 * {
     padding: 0;
@@ -19,7 +21,7 @@ a {
     width: 1440px;
     height: auto;
     margin: auto;
-    background-color: gray;
+    background-color: rgb(230, 230, 230);
 
 
 }
@@ -140,7 +142,7 @@ a {
     padding-top: 100px;
     background-color: #fff;
     margin: 1rem;
-    
+
 }
 
 .footer-groups {
@@ -207,7 +209,7 @@ a {
     opacity: .5;
 }
 
-.inputWithIcon .input-email {}
+
 
 .inputWithIcon {
     position: relative;
@@ -221,7 +223,7 @@ a {
 
 }
 
-.material-icons {
+.pink-arrow {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -250,7 +252,8 @@ a {
     line-height: 23px;
     padding-right: 20px;
 }
-.fa-instagram{
+
+.fa-instagram {
     padding-right: 0;
 }
 
@@ -263,7 +266,7 @@ a {
 }
 
 .copyright-text {
-    
+
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -273,14 +276,14 @@ a {
 
 }
 
-.footer-small{
+.footer-small {
     margin: auto;
     background-color: #fff;
     width: 768px;
     height: 367px;
 }
 
-.footer-small-group{
+.footer-small-group {
     color: rgba(31, 32, 65, 0.75);
     font-size: 14px;
     line-height: 17px;
@@ -288,9 +291,8 @@ a {
     white-space: nowrap;
     text-align: center;
 }
-.footer-small-descp{
+
+.footer-small-descp {
     padding-bottom: 25px;
     padding-top: 20px;
 }
-
-
