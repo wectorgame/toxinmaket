@@ -17,6 +17,7 @@ console.log("Post to String:", post.toString());
 
 const App = () => (
   <>
+  <Register />
     <CardsLux />
     <LogIn />
     <Cards />
@@ -293,4 +294,16 @@ const CardsLux = () => (
     </div>
   </div>
 );
+const Register =() =>(
+  <div className="container">
+    <div className="register-block">
+      <h1 className="register-title"></h1>
+      <input type="text" className="register-name" placeholder="Имя"/>
+      <input type="text" className="register-surname" placeholder="Фамилия"/>
+      <input type="radio" name="male" className="register-male"/>
+
+    </div>
+
+  </div>
+)
 render(<App />, document.getElementById("app"));
