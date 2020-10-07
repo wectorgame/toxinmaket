@@ -17,6 +17,7 @@ console.log("Post to String:", post.toString());
 
 const App = () => (
   <>
+    <CardsLux />
     <LogIn />
     <Cards />
 
@@ -151,7 +152,7 @@ const App = () => (
             </p>
             <div className="inputWithIcon">
               <input type="text" placeholder="Email" class="input-email" />
-              <i class="material-icons pink-arrow ">arrow_forward</i>
+              <i class="material-icons pink-icon ">arrow_forward</i>
             </div>
           </div>
         </div>
@@ -209,16 +210,22 @@ const Cards = () => (
         </div>
         <div className="card-info">
           <div className="card-number">№840</div>
-          <div className="card-price">9 900₽ в сутки</div>
+          <div className="card-price">
+            <p className="first-text">9 900₽&nbsp;</p>{" "}
+            <p className="second-text"> в сутки</p>
+          </div>
           <div className="card-border">
             <div className="card-stars">
-              <i class="material-icons">star</i>
-              <i class="material-icons">star</i>
-              <i class="material-icons">star</i>
-              <i class="material-icons">star</i>
-              <i class="material-icons">star_border</i>
+              <i class="material-icons pink-icon">star</i>
+              <i class="material-icons pink-icon">star</i>
+              <i class="material-icons pink-icon">star</i>
+              <i class="material-icons pink-icon">star</i>
+              <i class="material-icons pink-icon">star_border</i>
             </div>
-            <div className="card-reviews">65 Отзывов</div>
+            <div className="card-reviews">
+              <p className="first-text">65&nbsp;</p>{" "}
+              <p className="second-text">отзывов</p>
+            </div>
           </div>
         </div>
       </div>
@@ -242,6 +249,46 @@ const LogIn = () => (
         <button type="submit" className="login-btn-create">
           Создать
         </button>
+      </div>
+    </div>
+  </div>
+);
+
+const CardsLux = () => (
+  <div class="container">
+    <div className="card">
+      <div className="card-img card-img2">
+        <div className="card-img-expands">
+          <i class="material-icons expand-left">expand_more</i>
+          <i class="material-icons expand-right">expand_more</i>
+        </div>
+        <div className="ellipse">
+          <input type="radio" name="hotel" className="dot" />
+          <input type="radio" name="hotel" className="dot" />
+          <input type="radio" name="hotel" className="dot" />
+          <input type="radio" name="hotel" className="dot" />
+        </div>
+      </div>
+      <div className="card-info">
+        <div className="card-number no-margin-right">№888</div>
+        <div className="card-lux">люкс</div>
+        <div className="card-price">
+          <p className="first-text">9 990₽&nbsp;</p>{" "}
+          <p className="second-text"> в сутки</p>{" "}
+        </div>
+        <div className="card-border">
+          <div className="card-stars">
+            <i class="material-icons pink-icon">star</i>
+            <i class="material-icons pink-icon">star</i>
+            <i class="material-icons pink-icon">star</i>
+            <i class="material-icons pink-icon">star</i>
+            <i class="material-icons pink-icon">star</i>
+          </div>
+          <div className="card-reviews">
+            <p className="first-text">145&nbsp;</p>{" "}
+            <p className="second-text">отзывов</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
