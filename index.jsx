@@ -298,9 +298,18 @@ const Register =() =>(
   <div className="container">
     <div className="register-block">
       <h1 className="register-title"></h1>
-      <input type="text" className="register-name" placeholder="Имя"/>
-      <input type="text" className="register-surname" placeholder="Фамилия"/>
+      <input type="text" className="register-input" placeholder="Имя"/>
+      <input type="text" className="register-input" placeholder="Фамилия"/>
       <input type="radio" name="male" className="register-male"/>
+      <h2>дата рождения</h2>
+      <input type="text" className="register-input" placeholder="ДД.ММ.ГГГГ"/>
+      <h2>данные для входа в сервис</h2>
+      <input type="text" className="register-input" placeholder="Email"/>
+      <input type="text" className="register-input" placeholder="Email"/>
+      <div className="register-offer">
+        <p>Получать спецпредложения</p>
+      </div>
+      
 
     </div>
 
