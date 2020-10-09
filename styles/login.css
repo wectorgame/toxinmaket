@@ -114,9 +114,10 @@
     background: #fff;
 }
 
+
 .register-male-radio {
     margin-right: 20px;
-    
+    display: block;
     position: relative;
     cursor: pointer;
 
@@ -134,9 +135,7 @@
 
 .register-checkmark {
     position: absolute;
-    top: 0;
-    left: 25;
-    right: 20;
+    left: -30px;
     width: 20px;
     height: 20px;
     background: #FFFFFF;
@@ -149,7 +148,7 @@
 }
 
 .register-male-radio:hover input ~ .register-checkmark{
-    background-color: #f2ebff;
+    background-color: #eee;
 }
 .register-male-radio input:checked ~ .register-checkmark {
     background: #FFFFFF;

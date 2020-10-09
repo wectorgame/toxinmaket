@@ -17,7 +17,7 @@ console.log("Post to String:", post.toString());
 
 const App = () => (
   <>
-  <Register />
+    <Register />
     <CardsLux />
     <LogIn />
     <Cards />
@@ -294,39 +294,37 @@ const CardsLux = () => (
     </div>
   </div>
 );
-const Register =() =>(
+const Register = () => (
   <div className="container">
     <div className="register-block">
       <h1 className="register-title">Регистрация аккаунта</h1>
-      <input type="text" className="login-email" placeholder="Имя"/>
-      <input type="text" className="login-email" placeholder="Фамилия"/>
+      <input type="text" className="login-email" placeholder="Имя" />
+      <input type="text" className="login-email" placeholder="Фамилия" />
       <div className="flex-disp">
-      <div className="register-male-radio">
-      <input type="radio" name="male" className="register-male " />
-      <span class="register-checkmark"></span>
-      <label htmlFor="male">Мужчина</label>
-      
-      <div className="register-male-radio">
-      <input type="radio" name="male" className="register-male margin-right"/>
-      <span class="register-checkmark"></span>
-      <label htmlFor="female">Женщина</label>
-       
+        <label class="register-male-radio">
+          Мужчина
+          <input type="radio" checked="checked" name="radio" />
+          <span class="register-checkmark"></span>
+        </label>
+
+        <label class="register-male-radio">
+          Женщина
+          <input type="radio"  name="radio" />
+          <span class="register-checkmark"></span>
+        </label>
       </div>
       <h2>дата рождения</h2>
-      <input type="text" className="login-email" placeholder="ДД.ММ.ГГГГ"/>
+      <input type="text" className="login-email" placeholder="ДД.ММ.ГГГГ" />
       <h2>данные для входа в сервис</h2>
-      <input type="text" className="login-email" placeholder="Email"/>
-      <input type="text" className="login-email" placeholder="Пароль"/>
+      <input type="text" className="login-email" placeholder="Email" />
+      <input type="text" className="login-email" placeholder="Пароль" />
       <div className="register-offer">
         <p>Получать спецпредложения</p>
       </div>
-     <button className="register-btn">Перейти к оплате</button>
+      <button className="register-btn">Перейти к оплате</button>
       <p>Уже есть аккаунт на Toxin</p>
       <button className="register-btn-in">Войти</button>
-
-
     </div>
-
   </div>
-)
+);
 render(<App />, document.getElementById("app"));
