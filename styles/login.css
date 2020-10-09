@@ -33,6 +33,7 @@
     border-radius: 4px;
     padding: 12px 0 8px 15px;
     margin-bottom: 10px;
+    outline: none;
 }
 
 .login-email::placeholder,
@@ -76,7 +77,7 @@
     margin-top: 40px;
     display: flex;
     flex-wrap: nowrap;
-   
+
 }
 
 .login-btn-text {
@@ -105,6 +106,80 @@
 }
 
 
-.register-block{
+.register-block {
+    padding: 30px;
+    width: 380px;
+    height: 646px;
+    margin: auto;
+    background: #fff;
+}
+
+.register-male-radio {
+    margin-right: 20px;
+    
+    position: relative;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.register-male-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.register-checkmark {
+    position: absolute;
+    top: 0;
+    left: 25;
+    right: 20;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #BC9CFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.flex-disp{
+    display: flex;
+}
+
+.register-male-radio:hover input ~ .register-checkmark{
+    background-color: #f2ebff;
+}
+.register-male-radio input:checked ~ .register-checkmark {
+    background: #FFFFFF;
+  }
+  .register-checkmark:after {
+      
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .register-male-radio input:checked ~ .register-checkmark:after {
+    display: block;
+  }
+  .register-male-radio .register-checkmark:after {
+    top: 3px;
+    right: 4px;
+   left: 3px;
+   bottom: 4px;
+   width: 12px;
+   height: 12px;
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+border-radius: 10px;
+}
+.register-male {
+    margin-right: 50px;
+}
+.margin-right{
+
+}
+label {
+    margin-left: 30px;
     
 }

@@ -297,19 +297,33 @@ const CardsLux = () => (
 const Register =() =>(
   <div className="container">
     <div className="register-block">
-      <h1 className="register-title"></h1>
-      <input type="text" className="register-input" placeholder="Имя"/>
-      <input type="text" className="register-input" placeholder="Фамилия"/>
-      <input type="radio" name="male" className="register-male"/>
+      <h1 className="register-title">Регистрация аккаунта</h1>
+      <input type="text" className="login-email" placeholder="Имя"/>
+      <input type="text" className="login-email" placeholder="Фамилия"/>
+      <div className="flex-disp">
+      <div className="register-male-radio">
+      <input type="radio" name="male" className="register-male " />
+      <span class="register-checkmark"></span>
+      <label htmlFor="male">Мужчина</label>
+      
+      <div className="register-male-radio">
+      <input type="radio" name="male" className="register-male margin-right"/>
+      <span class="register-checkmark"></span>
+      <label htmlFor="female">Женщина</label>
+       
+      </div>
       <h2>дата рождения</h2>
-      <input type="text" className="register-input" placeholder="ДД.ММ.ГГГГ"/>
+      <input type="text" className="login-email" placeholder="ДД.ММ.ГГГГ"/>
       <h2>данные для входа в сервис</h2>
-      <input type="text" className="register-input" placeholder="Email"/>
-      <input type="text" className="register-input" placeholder="Email"/>
+      <input type="text" className="login-email" placeholder="Email"/>
+      <input type="text" className="login-email" placeholder="Пароль"/>
       <div className="register-offer">
         <p>Получать спецпредложения</p>
       </div>
-      
+     <button className="register-btn">Перейти к оплате</button>
+      <p>Уже есть аккаунт на Toxin</p>
+      <button className="register-btn-in">Войти</button>
+
 
     </div>
 
